@@ -14,3 +14,16 @@ form.addEventListener('focusout', (e) => {
         elementFocusOut.nextElementSibling.classList.remove('active')
     }
 })
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const password = document.querySelector('#senha-input')
+    const confirmPassword = document.querySelector('#confirm-senha-input')
+
+    if (password.value === confirmPassword.value) {
+        console.log('Request')
+    } else {
+        console.log('As senhas não coincidem')
+    }
+})

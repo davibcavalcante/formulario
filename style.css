@@ -37,12 +37,19 @@ input {
     border-radius: 8px;
     border: 1px solid black;
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.08);
+    outline-color: rgb(25, 160, 165);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 button {
     font-size: 1.2em;
     text-transform: uppercase;
-    width: 100%;
+    width: 48%;
     padding: 8px;
     border-radius: 8px;
     border: 1px solid black;
@@ -56,13 +63,14 @@ button:hover {
     background-color: rgb(25, 160, 165);
 }
 
-.email-container, .usuario-container, .senha-container {
+.email-container, .usuario-container, .senha-container, .confirm-senha-container {
     position: relative;
     margin-bottom: 25px;
 }
 
 label {
     color: rgb(50, 50, 50);
+    border: 2px solid transparent;
     position: absolute;
     left: 10px;
     top: 50%;
@@ -71,9 +79,10 @@ label {
 }
 
 label.active {
+    font-size: .8em;
     background-color: white;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    border-right: 2px solid rgb(25, 160, 165);
+    border-left: 2px solid rgb(25, 160, 165);
     padding: 0px 3px;
     top: 0;
 }
